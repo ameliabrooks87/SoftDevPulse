@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftDevPulse - Software Development in Chicago</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+    /* Reset some default browser styles */
+body, h1, h2, h3, p, a, form, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333333; /* Dark Gray */
+    background-color: #F2F2F2; /* Light Gray */
+    margin: 0;
+}
+
+/* Header */
+header {
+    background: #003366; /* Navy Blue */
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background: #003366; /* Navy Blue */
+    color: #fff;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background: #4682B4; /* Steel Blue */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #003366; /* Darker Navy Blue */
+}
+
+.hero-image {
+    max-width: 40%;
+}
+
+.hero-image i {
+    font-size: 5rem;
+    color: #fff;
+}
+
+/* Value Proposition */
+#value-proposition {
+    background: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.benefits {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.benefit {
+    max-width: 30%;
+    text-align: center;
+    animation: fadeInUp 2s ease-out;
+}
+
+.benefit i {
+    font-size: 3rem;
+    color: #003366; /* Navy Blue */
+}
+
+.benefit h3 {
+    margin: 1rem 0;
+}
+
+/* Services Overview */
+#services {
+    padding: 2rem;
+    background: #CCCCCC; /* Medium Gray */
+}
+
+.service {
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeInUp 2s ease-out;
+}
+
+.service i {
+    font-size: 4rem;
+    color: #003366; /* Navy Blue */
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #4682B4; /* Steel Blue */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #003366; /* Darker Navy Blue */
+}
+
+/* How It Works */
+#how-it-works {
+    padding: 2rem;
+    background: #fff;
+    text-align: center;
+}
+
+.process {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.step {
+    max-width: 18%;
+    margin: 1rem;
+    animation: fadeInUp 2s ease-out;
+}
+
+.step i {
+    font-size: 4rem;
+    color: #4682B4; /* Steel Blue */
+}
+
+/* Case Studies */
+#case-studies {
+    padding: 2rem;
+    background: #CCCCCC; /* Medium Gray */
+}
+
+.case-study {
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeInUp 2s ease-out;
+}
+
+.case-study i {
+    font-size: 4rem;
+    color: #003366; /* Navy Blue */
+}
+
+/* Testimonials */
+#testimonials {
+    padding: 2rem;
+    background: #fff;
+    text-align: center;
+}
+
+.testimonial {
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 2s ease-out;
+}
+
+.testimonial blockquote {
+    font-style: italic;
+}
+
+/* Technology Stack */
+#technology-stack {
+    padding: 2rem;
+    background: #CCCCCC; /* Medium Gray */
+    text-align: center;
+}
+
+.tech {
+    margin-bottom: 2rem;
+    animation: fadeInUp 2s ease-out;
+}
+
+.tech i {
+    font-size: 4rem;
+    color: #4682B4; /* Steel Blue */
+}
+
+/* Industry Expertise */
+#industry-expertise {
+    padding: 2rem;
+    background: #fff;
+}
+
+.industry {
+    margin-bottom: 2rem;
+    animation: fadeInUp 2s ease-out;
+}
+
+/* Blog */
+#blog {
+    padding: 2rem;
+    background: #CCCCCC; /* Medium Gray */
+}
+
+.post {
+    margin-bottom: 2rem;
+    animation: fadeInUp 2s ease-out;
+}
+
+/* Resources */
+#resources {
+    padding: 2rem;
+    background: #fff;
+    text-align: center;
+}
+
+.resources a {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background: #4682B4; /* Steel Blue */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0.5rem;
+    transition: background 0.3s ease;
+}
+
+.resources a:hover {
+    background: #003366; /* Darker Navy Blue */
+}
+
+/* Contact Information */
+#contact {
+    padding: 2rem;
+    background: #CCCCCC; /* Medium Gray */
+    text-align: center;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.7rem;
+    margin: 0.5rem 0;
+    border: 1px solid #CCCCCC; /* Medium Gray */
+    border-radius: 5px;
+}
+
+form button {
+    padding: 0.7rem 1.5rem;
+    background: #4682B4; /* Steel Blue */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #003366; /* Darker Navy Blue */
+}
+
+/* Call to Action */
+#cta {
+    padding: 2rem;
+    background: #003366; /* Navy Blue */
+    color: #fff;
+    text-align: center;
+}
+
+#cta h2 {
+    margin-bottom: 1rem;
+}
+
+/* Trust Signals */
+#trust-signals {
+    padding: 2rem;
+    background: #fff;
+    text-align: center;
+}
+
+.certifications, .partners {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.certifications i, .partners i {
+    margin: 0 1rem;
+    font-size: 3rem;
+    color: #4682B4; /* Steel Blue */
+}
+
+/* Footer */
+footer {
+    padding: 2rem;
+    background: #003366; /* Navy Blue */
+    color: #fff;
+}
+
+.footer-links {
+    text-align: center;
+}
+
+.footer-links a {
+    margin: 0 1rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.social-icon {
+    margin: 0 0.5rem;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.legal, .newsletter {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.newsletter form {
+    display: inline-block;
+}
+
+.newsletter input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+}
+
+.newsletter button {
+    padding: 0.5rem 1rem;
+    background: #4682B4; /* Steel Blue */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.newsletter button:hover {
+    background: #003366; /* Darker Navy Blue */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-out;
+}
+
+.fade-in-up {
+    animation: fadeInUp 2s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .benefits, .process {
+        flex-direction: column;
+    }
+
+    .benefit, .step, .service, .case-study, .industry, .post {
+        max-width: 100%;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <img src="https://via.placeholder.com/150x50?text=SoftDevPulse" alt="SoftDevPulse Logo" class="logo">
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Your Vision, Our Expertise</h1>
+            <p>Transforming ideas into robust software solutions with cutting-edge technology.</p>
+            <a href="#contact" class="btn-primary">Start Your Project</a>
+        </div>
+        <div class="hero-image">
+            <i class="fas fa-laptop-code"></i>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section id="value-proposition">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <p>We offer unparalleled software development services with a focus on innovation and customer satisfaction.</p>
+            <div class="benefits">
+                <div class="benefit">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Innovative Solutions</h3>
+                    <p>We leverage the latest technologies to create custom solutions tailored to your needs.</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-users"></i>
+                    <h3>Expert Team</h3>
+                    <p>Our team consists of experienced professionals who are experts in their respective fields.</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Customer-Centric</h3>
+                    <p>We prioritize your needs and provide support throughout the project lifecycle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Overview -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Core Services</h2>
+            <div class="service">
+                <i class="fas fa-code"></i>
+                <h3>Custom Software Development</h3>
+                <p>Tailored solutions to meet your business needs.</p>
+                <a href="services.html" class="btn-secondary">Learn More</a>
+            </div>
+            <div class="service">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Mobile App Development</h3>
+                <p>Engaging mobile experiences for your users.</p>
+                <a href="services.html" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works">
+        <div class="container">
+            <h2>How We Work</h2>
+            <div class="process">
+                <div class="step">
+                    <i class="fas fa-search"></i>
+                    <h3>Discovery</h3>
+                    <p>Understanding your requirements and objectives.</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-pencil-alt"></i>
+                    <h3>Design</h3>
+                    <p>Creating a user-centric design for optimal functionality.</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Development</h3>
+                    <p>Building the solution with the latest technologies.</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-check"></i>
+                    <h3>Testing</h3>
+                    <p>Ensuring quality through rigorous testing.</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-paper-plane"></i>
+                    <h3>Deployment</h3>
+                    <p>Launching and supporting the final product.</p>
+                </div>
+            </div>
+            <a href="process.html" class="btn-secondary">See How We Work</a>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section id="case-studies">
+        <div class="container">
+            <h2>Case Studies</h2>
+            <div class="case-study">
+                <i class="fas fa-briefcase"></i>
+                <h3>Project One</h3>
+                <p>Summary of a notable project with impressive results.</p>
+            </div>
+            <div class="case-study">
+                <i class="fas fa-briefcase"></i>
+                <h3>Project Two</h3>
+                <p>Summary of another successful project.</p>
+            </div>
+            <a href="case-studies.html" class="btn-secondary">View All Case Studies</a>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial">
+                <blockquote>
+                    <p>"SoftDevPulse delivered beyond our expectations with their top-notch development skills and exceptional service."</p>
+                </blockquote>
+                <cite>- Client Name</cite>
+            </div>
+            <a href="testimonials.html" class="btn-secondary">Read More Testimonials</a>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section id="technology-stack">
+        <div class="container">
+            <h2>Our Technology Stack</h2>
+            <div class="tech">
+                <i class="fas fa-cogs"></i>
+                <p>Description of technology expertise.</p>
+            </div>
+            <div class="tech">
+                <i class="fas fa-cogs"></i>
+                <p>Description of another technology.</p>
+            </div>
+            <a href="technology.html" class="btn-secondary">Learn More About Our Tech</a>
+        </div>
+    </section>
+
+    <!-- Industry Expertise -->
+    <section id="industry-expertise">
+        <div class="container">
+            <h2>Industry Expertise</h2>
+            <p>We specialize in various industries, offering tailored solutions to meet specific needs.</p>
+            <div class="industry">
+                <h3>Healthcare</h3>
+                <p>Providing solutions to enhance patient care and streamline operations.</p>
+            </div>
+            <div class="industry">
+                <h3>Finance</h3>
+                <p>Developing secure and efficient financial systems.</p>
+            </div>
+            <a href="industries.html" class="btn-secondary">Explore Our Industry Solutions</a>
+        </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog">
+        <div class="container">
+            <h2>Latest Insights</h2>
+            <div class="post">
+                <h3>Blog Post Title</h3>
+                <p>Excerpt from the latest blog post.</p>
+            </div>
+            <a href="blog.html" class="btn-secondary">Read Our Blog</a>
+        </div>
+    </section>
+
+    <!-- Resources -->
+    <section id="resources">
+        <div class="container">
+            <h2>Resources</h2>
+            <a href="whitepapers.html" class="btn-secondary">Download Whitepapers & E-books</a>
+            <a href="webinars.html" class="btn-secondary">Register for Webinars</a>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="submit-form.php" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+            <p>Address: 456 Maple Ave, Chicago, IL 60614</p>
+            <p>Email: <a href="mailto:jackhamesworth@gmail.com">jackhamesworth@gmail.com</a></p>
+            <p>Phone: (123) 456-7890</p>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="cta">
+        <div class="container">
+            <h2>Ready to Get Started?</h2>
+            <a href="#contact" class="btn-primary">Schedule a Consultation</a>
+        </div>
+    </section>
+
+    <!-- Trust Signals -->
+    <section id="trust-signals">
+        <div class="container">
+            <h2>Our Trust Signals</h2>
+            <div class="certifications">
+                <i class="fas fa-award"></i>
+                <i class="fas fa-certificate"></i>
+            </div>
+            <div class="partners">
+                <i class="fas fa-handshake"></i>
+                <i class="fas fa-briefcase"></i>
+            </div>
+            <p>Committed to data security and privacy.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="social-media">
+                <a href="#" class="social-icon">FB</a>
+                <a href="#" class="social-icon">TW</a>
+                <a href="#" class="social-icon">LI</a>
+            </div>
+            <div class="legal">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+            <div class="newsletter">
+                <form action="subscribe.php" method="post">
+                    <input type="email" name="email" placeholder="Subscribe to our newsletter" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FontAwesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
